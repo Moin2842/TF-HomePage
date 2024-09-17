@@ -1,0 +1,930 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TF Home Page</title>
+    <link rel="icon" href="Images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/css?family=Urbanist" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="script.js"></script>
+</head>
+
+<body>
+
+    <!-- Loader -->
+    <div class="loader" id="loader">
+        <div class="loader-content">
+            <svg id="svg" width="152" height="152" viewBox="0 0 151 152" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M0.604492 20.7483C0.604492 10.4652 8.94313 2.14258 19.2102 2.14258H92.9746L0.604492 69.6407V20.7483Z"
+                    stroke="#d2d2d2" />
+                <path
+                    d="M19.2102 151.106C8.94284 151.106 0.604492 142.795 0.604492 132.504V99.1198L34.4314 74.3501V151.106H19.2102Z"
+                    stroke="#d2d2d2" />
+                <path
+                    d="M122.717 9.4882H122.717L122.717 9.4821L122.623 1.78321C137.218 0.217854 143.856 2.60259 146.907 6.36973C148.454 8.27899 149.131 10.6006 149.414 13.0977C149.635 15.0458 149.613 17.0585 149.592 19.0415C149.586 19.6134 149.58 20.1829 149.58 20.7476V20.7478V132.507C149.58 142.794 141.245 151.109 130.974 151.109H122.717V9.4882Z"
+                    stroke="#d2d2d2" />
+                <path
+                    d="M75.9459 89.7481L75.9389 90.7463L76.7425 90.1541L97.6034 74.7797V93.8034L76.053 108.444L75.8358 108.591L75.834 108.854L75.5433 151.105H57.3389V58.0518L97.6034 28.293V49.32L76.3093 65.4753L76.1133 65.624L76.1116 65.8701L75.9459 89.7481Z"
+                    stroke="#d2d2d2" />
+            </svg>
+            <div class="logo-name">TECHFORCE GLOBAL</div>
+        </div>
+    </div>
+
+    <div class="web-content" id="webContent">
+
+        <section class="Hero-Section">
+            <div class="container">
+                <div class="row" data-aos="fade-up" data-aos-duration="3000">
+                    <div class="col-lg-12 text-center">
+                        <div id="txt">
+                            <h3 class="title focus-in-expand" id="quote">EMPOWERING YOUR</h3>
+                        </div>
+
+                        <span id="flipper" class="flip">
+                            <span class="step step0 set"><strong>Custom Software</strong> Solutions</span>
+                            <span class="step step1"><strong>AI-Powered</strong> Applications</span>
+                            <span class="step step2">Scalable <strong>Cloud Infrastructure</strong></span>
+                            <span class="step step3">Seamless <strong>User Experiences</strong></span>
+                        </span>
+
+                        <p class="Hero-text">
+                            We provide innovative software development, cloud computing, and AI-powered solutions that
+                            help
+                            organizations grow to new heights. Together, <span>Let's create your tomorrow now.</span>
+                        </p>
+
+                        <!-- <div class="explore-button text-center">
+                        <a href="#">Let's Connect<i class="bi bi-arrow-right-circle-fill"></i></a>
+                    </div> -->
+
+                        <a class="Main-Button" href="#">
+                            Let's Connect
+                            <span class="p-relative">
+                                <svg class="svg-icon" width="10" height="10" viewBox="0 0 10 10" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M9.86041 4.6429C9.94985 4.7377 10 4.86575 10 4.9992C10 5.13264 9.94985 5.2607 9.86041 5.35551L5.57586 9.85624C5.48448 9.94804 5.36309 9.99948 5.23667 10C5.17349 9.99969 5.11092 9.98704 5.0522 9.96246C4.96556 9.9243 4.89163 9.85991 4.83974 9.77759C4.78785 9.69527 4.76032 9.59866 4.76061 9.49994V5.49928H0.476061C0.349802 5.49928 0.228714 5.4466 0.139435 5.35281C0.0501564 5.25903 0 5.13183 0 4.9992C0 4.86657 0.0501564 4.73937 0.139435 4.64559C0.228714 4.55181 0.349802 4.49912 0.476061 4.49912H4.76061V0.49847C4.76032 0.399742 4.78785 0.303131 4.83974 0.220813C4.89163 0.138494 4.96556 0.0741515 5.0522 0.0358946C5.14013 -0.000133693 5.23598 -0.00927405 5.32865 0.00953239C5.42132 0.0283378 5.50703 0.0743215 5.57586 0.142163L9.86041 4.6429Z"
+                                        fill="currentcolor"></path>
+                                </svg>
+                                <svg class="svg-bg" width="30" height="30" viewBox="0 0 30 30" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M14.2257 0.947522C14.6258 0.457905 15.3742 0.457905 15.7743 0.947522L16.8781 2.29817C17.181 2.66879 17.704 2.77283 18.1256 2.54633L19.6623 1.72088C20.2193 1.42165 20.9107 1.70806 21.093 2.31352L21.5959 3.98376C21.7339 4.44207 22.1773 4.73834 22.6535 4.69044L24.3891 4.51587C25.0182 4.45258 25.5474 4.98179 25.4841 5.61093L25.3096 7.34647C25.2617 7.8227 25.5579 8.2661 26.0162 8.40409L27.6865 8.90697C28.2919 9.08926 28.5783 9.7807 28.2791 10.3377L27.4537 11.8744C27.2272 12.296 27.3312 12.819 27.7018 13.1219L29.0525 14.2257C29.5421 14.6258 29.5421 15.3742 29.0525 15.7743L27.7018 16.8781C27.3312 17.181 27.2272 17.704 27.4537 18.1256L28.2791 19.6623C28.5783 20.2193 28.2919 20.9107 27.6865 21.093L26.0162 21.5959C25.5579 21.7339 25.2617 22.1773 25.3096 22.6535L25.4841 24.3891C25.5474 25.0182 25.0182 25.5474 24.3891 25.4841L22.6535 25.3096C22.1773 25.2617 21.7339 25.5579 21.5959 26.0162L21.093 27.6865C20.9107 28.2919 20.2193 28.5783 19.6623 28.2791L18.1256 27.4537C17.704 27.2272 17.181 27.3312 16.8781 27.7018L15.7743 29.0525C15.3742 29.5421 14.6258 29.5421 14.2257 29.0525L13.1219 27.7018C12.819 27.3312 12.296 27.2272 11.8744 27.4537L10.3377 28.2791C9.7807 28.5783 9.08926 28.2919 8.90697 27.6865L8.40409 26.0162C8.2661 25.5579 7.8227 25.2617 7.34647 25.3096L5.61093 25.4841C4.98179 25.5474 4.45258 25.0182 4.51587 24.3891L4.69044 22.6535C4.73834 22.1773 4.44207 21.7339 3.98376 21.5959L2.31352 21.093C1.70806 20.9107 1.42165 20.2193 1.72088 19.6623L2.54633 18.1256C2.77283 17.704 2.66879 17.181 2.29817 16.8781L0.947522 15.7743C0.457905 15.3742 0.457905 14.6258 0.947522 14.2257L2.29817 13.1219C2.66879 12.819 2.77283 12.296 2.54633 11.8744L1.72088 10.3377C1.42165 9.7807 1.70806 9.08926 2.31352 8.90697L3.98376 8.40409C4.44207 8.2661 4.73834 7.8227 4.69044 7.34647L4.51587 5.61093C4.45258 4.98179 4.98179 4.45258 5.61093 4.51587L7.34647 4.69044C7.8227 4.73834 8.2661 4.44207 8.40409 3.98376L8.90697 2.31352C9.08926 1.70806 9.7807 1.42165 10.3377 1.72088L11.8744 2.54633C12.296 2.77283 12.819 2.66879 13.1219 2.29817L14.2257 0.947522Z"
+                                        fill="currentColor"></path>
+                                </svg>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+                <a href="#" class="scroll" data-aos="fade-up" data-aos-duration="3000">
+                    <!-- <img src="Images/scroll-down.webp" alt="scroll">
+                <span>
+                    <svg width="26" height="27" viewBox="0 0 26 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M19.2412 16.0874L12.7778 22.5508L6.31433 16.0874" stroke="#17181B" stroke-width="1.5"
+                            stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+                        <path d="M12.7777 4.44922V22.3701" stroke="#17181B" stroke-width="1.5" stroke-miterlimit="10"
+                            stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                </span> -->
+                    <div class="scroll-btn">
+                        <svg style="overflow: visible;">
+                            <desc>Created with Snap</desc>
+
+                            <rect x="1" y="1" width="30" height="48" rx="19" ry="15" stroke="#11112A" fill="none"
+                                style="stroke-width: 2; stroke-linecap: round; opacity: 0.3;">
+
+                            </rect>
+                            <rect class="animated" x="1" y="1" width="30" height="48" rx="19" ry="15" stroke="#11112A"
+                                fill="none"
+                                style="stroke-width: 1.5; stroke-linecap: round; opacity: 0.8; visibility: visible; stroke-dashoffset: 0; stroke-dasharray: 0px, 0px;">
+
+                            </rect>
+                            <circle class="ball" cx="16" cy="16.638031364511352" r="2.8000000000000003" fill="#11112A"
+                                stroke="none"></circle>
+                        </svg>
+                        <div class="text">
+                            <h6>Click to Scroll</6>
+                        </div>
+                    </div>
+                </a>
+                <div class="fd-hero-4-bg">
+                    <span class="fd-hero-4-bg-circle-1"></span>
+                    <span class="fd-hero-4-bg-circle-2"></span>
+                    <span class="fd-hero-4-bg-circle-3"></span>
+                    <span class="fd-hero-4-bg-circle-4"></span>
+                </div>
+            </div>
+        </section>
+
+        <section class="award-section" data-aos="fade-up" data-aos-duration="3000">
+            <!-- <div class="logos">
+            <div class="logos-slide">
+                <img src="Images/Award/Clutch.png" />
+                <img src="Images/Award/Software Suggest.png" />
+                <img src="Images/Award/Design Rush.png" />
+                <img src="Images/Award/Good Firm.png" />
+                <img src="Images/Award/Expertise.com.png" />
+                <img src="Images/Award/Clutch.png" />
+                <img src="Images/Award/Software Suggest.png" />
+                <img src="Images/Award/Design Rush.png" />
+                <img src="Images/Award/Good Firm.png" />
+                <img src="Images/Award/Expertise.com.png" />
+            </div>
+        </div> -->
+            <div class="container">
+                <ul>
+                    <li class="award-item m-3">
+                        <img src="Images/Award/Clutch.png" alt="Clutch" class="img-fluid award-logo">
+                    </li>
+
+                    <li class="award-item m-3">
+                        <img src="Images/Award/Software Suggest.png" alt="Software Suggest"
+                            class="img-fluid award-logo">
+                    </li>
+
+                    <li class="award-item m-3">
+                        <img src="Images/Award/Design Rush.png" alt="Design Rush" class="img-fluid award-logo">
+                    </li>
+
+                    <li class="award-item m-3">
+                        <img src="Images/Award/Good Firm.png" alt="Good Firms" class="img-fluid award-logo">
+                    </li>
+
+                    <li class="award-item m-3">
+                        <img src="Images/Award/Expertise.com.png" alt="Expertise" class="img-fluid award-logo">
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="about-area" data-aos="fade-up" data-aos-duration="3000">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <div class="about-left">
+                            <div class="about-thumb">
+                                <img src="Images/about-thumb.png" alt="">
+                            </div>
+                            <div class="about-shape">
+                                <img src="Images/Elipse-Group.svg" alt="">
+                            </div>
+                            <div class="about-conter-box">
+                                <div class="about-counter-title">
+                                    <h4>15+</h4>
+                                    <p>Years of<br> Experience</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="about-right">
+                            <div class="section-title left">
+                                <span class="badge"><i class="fa-solid fa-star"></i>About Techforce</span>
+                                <h1 class="light-bg-title">Making Things Easy For You!</h1>
+                                <p>We turn innovative ideas into exceptional products customized to meet your specific
+                                    needs. Our rapid
+                                    development method produces innovations that shape the business environment.</p>
+                                <ul class="features">
+                                    <li><img class="check" src="Images/Check.svg" alt="">Empowering businesses with
+                                        innovative solutions.</li>
+                                    <li><img class="check" src="Images/Check.svg" alt="">Building tech for a smarter
+                                        tomorrow.</li>
+                                    <li><img class="check" src="Images/Check.svg" alt="">Delivering IT services for your
+                                        success.</li>
+                                    <li><img class="check" src="Images/Check.svg" alt="">Crafting seamless experiences
+                                        with
+                                        intelligent tech.
+                                    </li>
+                                </ul>
+                                <div class="about-btn">
+                                    <a class="Main-Button" href="#">
+                                        Explore More
+                                        <span class="p-relative">
+                                            <svg class="svg-icon" width="10" height="10" viewBox="0 0 10 10" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M9.86041 4.6429C9.94985 4.7377 10 4.86575 10 4.9992C10 5.13264 9.94985 5.2607 9.86041 5.35551L5.57586 9.85624C5.48448 9.94804 5.36309 9.99948 5.23667 10C5.17349 9.99969 5.11092 9.98704 5.0522 9.96246C4.96556 9.9243 4.89163 9.85991 4.83974 9.77759C4.78785 9.69527 4.76032 9.59866 4.76061 9.49994V5.49928H0.476061C0.349802 5.49928 0.228714 5.4466 0.139435 5.35281C0.0501564 5.25903 0 5.13183 0 4.9992C0 4.86657 0.0501564 4.73937 0.139435 4.64559C0.228714 4.55181 0.349802 4.49912 0.476061 4.49912H4.76061V0.49847C4.76032 0.399742 4.78785 0.303131 4.83974 0.220813C4.89163 0.138494 4.96556 0.0741515 5.0522 0.0358946C5.14013 -0.000133693 5.23598 -0.00927405 5.32865 0.00953239C5.42132 0.0283378 5.50703 0.0743215 5.57586 0.142163L9.86041 4.6429Z"
+                                                    fill="currentcolor"></path>
+                                            </svg>
+                                            <svg class="svg-bg" width="30" height="30" viewBox="0 0 30 30" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M14.2257 0.947522C14.6258 0.457905 15.3742 0.457905 15.7743 0.947522L16.8781 2.29817C17.181 2.66879 17.704 2.77283 18.1256 2.54633L19.6623 1.72088C20.2193 1.42165 20.9107 1.70806 21.093 2.31352L21.5959 3.98376C21.7339 4.44207 22.1773 4.73834 22.6535 4.69044L24.3891 4.51587C25.0182 4.45258 25.5474 4.98179 25.4841 5.61093L25.3096 7.34647C25.2617 7.8227 25.5579 8.2661 26.0162 8.40409L27.6865 8.90697C28.2919 9.08926 28.5783 9.7807 28.2791 10.3377L27.4537 11.8744C27.2272 12.296 27.3312 12.819 27.7018 13.1219L29.0525 14.2257C29.5421 14.6258 29.5421 15.3742 29.0525 15.7743L27.7018 16.8781C27.3312 17.181 27.2272 17.704 27.4537 18.1256L28.2791 19.6623C28.5783 20.2193 28.2919 20.9107 27.6865 21.093L26.0162 21.5959C25.5579 21.7339 25.2617 22.1773 25.3096 22.6535L25.4841 24.3891C25.5474 25.0182 25.0182 25.5474 24.3891 25.4841L22.6535 25.3096C22.1773 25.2617 21.7339 25.5579 21.5959 26.0162L21.093 27.6865C20.9107 28.2919 20.2193 28.5783 19.6623 28.2791L18.1256 27.4537C17.704 27.2272 17.181 27.3312 16.8781 27.7018L15.7743 29.0525C15.3742 29.5421 14.6258 29.5421 14.2257 29.0525L13.1219 27.7018C12.819 27.3312 12.296 27.2272 11.8744 27.4537L10.3377 28.2791C9.7807 28.5783 9.08926 28.2919 8.90697 27.6865L8.40409 26.0162C8.2661 25.5579 7.8227 25.2617 7.34647 25.3096L5.61093 25.4841C4.98179 25.5474 4.45258 25.0182 4.51587 24.3891L4.69044 22.6535C4.73834 22.1773 4.44207 21.7339 3.98376 21.5959L2.31352 21.093C1.70806 20.9107 1.42165 20.2193 1.72088 19.6623L2.54633 18.1256C2.77283 17.704 2.66879 17.181 2.29817 16.8781L0.947522 15.7743C0.457905 15.3742 0.457905 14.6258 0.947522 14.2257L2.29817 13.1219C2.66879 12.819 2.77283 12.296 2.54633 11.8744L1.72088 10.3377C1.42165 9.7807 1.70806 9.08926 2.31352 8.90697L3.98376 8.40409C4.44207 8.2661 4.73834 7.8227 4.69044 7.34647L4.51587 5.61093C4.45258 4.98179 4.98179 4.45258 5.61093 4.51587L7.34647 4.69044C7.8227 4.73834 8.2661 4.44207 8.40409 3.98376L8.90697 2.31352C9.08926 1.70806 9.7807 1.42165 10.3377 1.72088L11.8744 2.54633C12.296 2.77283 12.819 2.66879 13.1219 2.29817L14.2257 0.947522Z"
+                                                    fill="currentColor"></path>
+                                            </svg>
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="counter-section text-center text-white">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3 col-6">
+                        <div class="counter-main">
+                            <h2 class="counter" data-target="15">0</h2><span>+</span>
+                        </div>
+                        <p>TEAM LEADERS</p>
+                    </div>
+                    <div class="col-md-3 col-6">
+                        <div class="counter-main">
+                            <h2 class="counter" data-target="400">0</h2><span>+</span>
+                        </div>
+                        <p>SOLUTIONS DELIVERED</p>
+                    </div>
+                    <div class="col-md-3 col-6">
+                        <div class="counter-main">
+                            <h2 class="counter" data-target="200">0</h2><span>+</span>
+                        </div>
+                        <p>HAPPY CLIENTS</p>
+                    </div>
+                    <div class="col-md-3 col-6">
+                        <div class="counter-main">
+                            <h2 class="counter" data-target="100">0</h2><span>+</span>
+                        </div>
+                        <p>EXPERTS IN THE TEAM</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="services-section"  data-aos="fade-up" data-aos-duration="3000">
+            <div class="container">
+                <div class="section-title"><span class="badge"><i
+                            class="fa-solid fa-star"></i>Services Techforce
+                        Provides</span>
+                    <h1 class="dark-bg-title">Our Highlighted Services</h1>
+                </div>
+
+                <div class="services-slider">
+                    <div class="card" data-tilt>
+                        <div class="card-content">
+                            <img src="Images/Services/Software Development.svg" alt="Software Development">
+                            <h3>Software Development</h3>
+                            <p>Custom software solutions and innovation</p>
+
+                            <button class="animated-button">
+                                <svg viewBox="0 0 24 24" class="arr-2" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z">
+                                    </path>
+                                </svg>
+                                <span class="text">Explore Further</span>
+                                <span class="circle"></span>
+                                <svg viewBox="0 0 24 24" class="arr-1" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z">
+                                    </path>
+                                </svg>
+                            </button>
+
+                        </div>
+                    </div>
+                    <div class="card" data-tilt>
+                        <div class="card-content">
+                            <img src="Images/Services/Fintech Solutions.svg" alt="Fintech Solutions">
+                            <h3>Fintech Solutions</h3>
+                            <p>Financial technology solutions for growth</p>
+                            <button class="animated-button">
+                                <svg viewBox="0 0 24 24" class="arr-2" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z">
+                                    </path>
+                                </svg>
+                                <span class="text">Explore Further</span>
+                                <span class="circle"></span>
+                                <svg viewBox="0 0 24 24" class="arr-1" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z">
+                                    </path>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="card" data-tilt>
+                        <div class="card-content">
+                            <img src="Images/Services/Blockchain Development.svg" alt="Blockchain Development">
+                            <h3>Blockchain Development</h3>
+                            <p>Secure and scalable blockchain development</p>
+                            <button class="animated-button">
+                                <svg viewBox="0 0 24 24" class="arr-2" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z">
+                                    </path>
+                                </svg>
+                                <span class="text">Explore Further</span>
+                                <span class="circle"></span>
+                                <svg viewBox="0 0 24 24" class="arr-1" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z">
+                                    </path>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="portfolio-section text-center" data-aos="fade-up" data-aos-duration="3000">
+            <div class="container text">
+                <span class="badge"><i class="fa-solid fa-star"></i>Featured Case Study</span>
+                <h1 class="light-bg-title">Explore Our Portfolio</h1>
+
+                <div class="row portfolio-main">
+                    <!-- First Card -->
+                    <div class="col-md-4">
+                        <div class="card position-relative">
+                            <img src="Images/Portfolio/Medicare-App.webp" class="card-img-top card-image" alt="#">
+                            <div class="card-body">
+                                <div class="card-content">
+                                    <h5 class="card-title">i-Care</h5>
+                                    <p class="card-description">Medicare app simplifies medical access.</p>
+                                </div>
+                                <a href="#" class="arrow-icon">
+                                    <i class="fas fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Second Card -->
+                    <div class="col-md-4">
+                        <div class="card position-relative">
+                            <img src="Images/Portfolio/Fortitude.webp" class="card-img-top card-image" alt="#">
+                            <div class="card-body">
+                                <div class="card-content">
+                                    <h5 class="card-title">Fortitude</h5>
+                                    <p class="card-description">A community-focused NFT project.</p>
+                                </div>
+                                <a href="#" class="arrow-icon">
+                                    <i class="fas fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Third Card -->
+                    <div class="col-md-4">
+                        <div class="card position-relative">
+                            <img src="Images/Portfolio/Medicare-App.webp" class="card-img-top card-image" alt="#">
+                            <div class="card-body">
+                                <div class="card-content">
+                                    <h5 class="card-title">i-Care</h5>
+                                    <p class="card-description">Medicare app simplifies medical access.</p>
+                                </div>
+                                <a href="#" class="arrow-icon">
+                                    <i class="fas fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <a class="Main-Button" href="#">
+                    View More
+                    <span class="p-relative">
+                        <svg class="svg-icon" width="10" height="10" viewBox="0 0 10 10" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M9.86041 4.6429C9.94985 4.7377 10 4.86575 10 4.9992C10 5.13264 9.94985 5.2607 9.86041 5.35551L5.57586 9.85624C5.48448 9.94804 5.36309 9.99948 5.23667 10C5.17349 9.99969 5.11092 9.98704 5.0522 9.96246C4.96556 9.9243 4.89163 9.85991 4.83974 9.77759C4.78785 9.69527 4.76032 9.59866 4.76061 9.49994V5.49928H0.476061C0.349802 5.49928 0.228714 5.4466 0.139435 5.35281C0.0501564 5.25903 0 5.13183 0 4.9992C0 4.86657 0.0501564 4.73937 0.139435 4.64559C0.228714 4.55181 0.349802 4.49912 0.476061 4.49912H4.76061V0.49847C4.76032 0.399742 4.78785 0.303131 4.83974 0.220813C4.89163 0.138494 4.96556 0.0741515 5.0522 0.0358946C5.14013 -0.000133693 5.23598 -0.00927405 5.32865 0.00953239C5.42132 0.0283378 5.50703 0.0743215 5.57586 0.142163L9.86041 4.6429Z"
+                                fill="currentcolor"></path>
+                        </svg>
+                        <svg class="svg-bg" width="30" height="30" viewBox="0 0 30 30" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M14.2257 0.947522C14.6258 0.457905 15.3742 0.457905 15.7743 0.947522L16.8781 2.29817C17.181 2.66879 17.704 2.77283 18.1256 2.54633L19.6623 1.72088C20.2193 1.42165 20.9107 1.70806 21.093 2.31352L21.5959 3.98376C21.7339 4.44207 22.1773 4.73834 22.6535 4.69044L24.3891 4.51587C25.0182 4.45258 25.5474 4.98179 25.4841 5.61093L25.3096 7.34647C25.2617 7.8227 25.5579 8.2661 26.0162 8.40409L27.6865 8.90697C28.2919 9.08926 28.5783 9.7807 28.2791 10.3377L27.4537 11.8744C27.2272 12.296 27.3312 12.819 27.7018 13.1219L29.0525 14.2257C29.5421 14.6258 29.5421 15.3742 29.0525 15.7743L27.7018 16.8781C27.3312 17.181 27.2272 17.704 27.4537 18.1256L28.2791 19.6623C28.5783 20.2193 28.2919 20.9107 27.6865 21.093L26.0162 21.5959C25.5579 21.7339 25.2617 22.1773 25.3096 22.6535L25.4841 24.3891C25.5474 25.0182 25.0182 25.5474 24.3891 25.4841L22.6535 25.3096C22.1773 25.2617 21.7339 25.5579 21.5959 26.0162L21.093 27.6865C20.9107 28.2919 20.2193 28.5783 19.6623 28.2791L18.1256 27.4537C17.704 27.2272 17.181 27.3312 16.8781 27.7018L15.7743 29.0525C15.3742 29.5421 14.6258 29.5421 14.2257 29.0525L13.1219 27.7018C12.819 27.3312 12.296 27.2272 11.8744 27.4537L10.3377 28.2791C9.7807 28.5783 9.08926 28.2919 8.90697 27.6865L8.40409 26.0162C8.2661 25.5579 7.8227 25.2617 7.34647 25.3096L5.61093 25.4841C4.98179 25.5474 4.45258 25.0182 4.51587 24.3891L4.69044 22.6535C4.73834 22.1773 4.44207 21.7339 3.98376 21.5959L2.31352 21.093C1.70806 20.9107 1.42165 20.2193 1.72088 19.6623L2.54633 18.1256C2.77283 17.704 2.66879 17.181 2.29817 16.8781L0.947522 15.7743C0.457905 15.3742 0.457905 14.6258 0.947522 14.2257L2.29817 13.1219C2.66879 12.819 2.77283 12.296 2.54633 11.8744L1.72088 10.3377C1.42165 9.7807 1.70806 9.08926 2.31352 8.90697L3.98376 8.40409C4.44207 8.2661 4.73834 7.8227 4.69044 7.34647L4.51587 5.61093C4.45258 4.98179 4.98179 4.45258 5.61093 4.51587L7.34647 4.69044C7.8227 4.73834 8.2661 4.44207 8.40409 3.98376L8.90697 2.31352C9.08926 1.70806 9.7807 1.42165 10.3377 1.72088L11.8744 2.54633C12.296 2.77283 12.819 2.66879 13.1219 2.29817L14.2257 0.947522Z"
+                                fill="currentColor"></path>
+                        </svg>
+                    </span>
+                </a>
+            </div>
+        </section>
+
+        <section class="Our-Approach-Section">
+            <div class="container text-center">
+                <div class="section-title">
+                    <span class="badge"><i class="fa-solid fa-star"></i>Our Process</span>
+                    <h1 class="light-bg-title">Design and Development Approach</h1>
+                </div>
+                <div class="desktop-view">
+                    <div class="row align-items-center" data-aos="fade-right" data-aos-duration="2000">
+                        <div class="col-lg-10 mt-1 main pink-bg">
+                            <div class="row ">
+                                <div class="col-md-2 col-lg-2 col-xxl-1 approach-img">
+                                    <img decoding="async" loading="lazy"
+                                        src="Images/Our Approch/Requirement Understanding.svg" alt="">
+                                </div>
+                                <div class="col-md-2 col-lg-2 col-xxl-2 process-text">
+                                    <p>01.</p>
+                                </div>
+                                <div class="col-md-10 col-lg-8 col-xxl-9 text-left main-text">
+                                    <h3>Requirement Understanding</h3>
+                                    <p>Once you have dropped an inquiry, we take a call with you and understand your
+                                        requirements for your project. We discuss with you your project goals.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-2">
+                            <img decoding="async" loading="lazy" src="Images/Our Approch/Arrow1.svg" alt="arrow">
+                        </div>
+                    </div>
+
+                    <div class="row align-items-center" data-aos="fade-left" data-aos-duration="2000">
+                        <div class="col-lg-2">
+                            <img decoding="async" loading="lazy" src="Images/Our Approch/Arrow2.svg" alt="arrow">
+                        </div>
+                        <div class="col-lg-10 mt-1 main yellow-bg">
+                            <div class="row ">
+
+                                <div class="col-md-2 col-lg-2 col-xxl-2 process-text">
+                                    <p>02.</p>
+                                </div>
+                                <div class="col-md-10 col-lg-8 col-xxl-9 text-left main-text">
+                                    <h3>Design and Prototyping</h3>
+                                    <p>After discussing the requirements, our UI/UX team designs your product by
+                                        strategically
+                                        placing aesthetic elements to make it attractive.</p>
+                                </div>
+                                <div class="col-md-2 col-lg-2 col-xxl-1 approach-img">
+                                    <img decoding="async" loading="lazy"
+                                        src="Images/Our Approch/Design and Prototyping.svg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row align-items-center" data-aos="fade-right" data-aos-duration="2000">
+                        <div class="col-lg-10 mt-1 main blue-bg">
+                            <div class="row ">
+                                <div class="col-md-2 col-lg-2 col-xxl-1 approach-img">
+                                    <img decoding="async" loading="lazy"
+                                        src="Images/Our Approch/Development and Quality Assurance.svg" alt="">
+                                </div>
+                                <div class="col-md-2 col-lg-2 col-xxl-2 process-text">
+                                    <p>03.</p>
+                                </div>
+                                <div class="col-md-10 col-lg-8 col-xxl-9 text-left main-text">
+                                    <h3>Development and Quality Assurance</h3>
+                                    <p>Our skilled developers create tailored mobile and web solutions with the latest
+                                        features,
+                                        ensuring high performance and user engagement. Our dedicated testing team
+                                        rigorously
+                                        tests across devices, delivering a responsive, bug-free solution ready for
+                                        launch.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-2">
+                            <img decoding="async" loading="lazy" src="Images/Our Approch/Arrow3.svg" alt="arrow">
+                        </div>
+                    </div>
+
+                    <div class="row align-items-center" data-aos="fade-left" data-aos-duration="2000">
+                        <div class="col-lg-2">
+                            <img decoding="async" loading="lazy" src="Images/Our Approch/Arrow4.svg" alt="arrow">
+                        </div>
+                        <div class="col-lg-10 mt-1 main pink-bg">
+                            <div class="row ">
+
+                                <div class="col-md-2 col-lg-2 col-xxl-2 process-text">
+                                    <p>04.</p>
+                                </div>
+                                <div class="col-md-10 col-lg-8 col-xxl-9 text-left main-text">
+                                    <h3>Deployment</h3>
+                                    <p>Once developed, we deploy your app or web solution to the server, releasing it on
+                                        the
+                                        App
+                                        Store/Play Store or making it live for users. We ensure timely launch and
+                                        promptly
+                                        notify you of any post-launch issues.</p>
+                                </div>
+                                <div class="col-md-2 col-lg-2 col-xxl-1 approach-img">
+                                    <img decoding="async" loading="lazy" src="Images/Our Approch/Deployment.svg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row align-items-center" data-aos="fade-right" data-aos-duration="2000">
+                        <div class="col-lg-10 mt-1 main yellow-bg">
+                            <div class="row ">
+                                <div class="col-md-2 col-lg-2 col-xxl-1 approach-img">
+                                    <img decoding="async" loading="lazy"
+                                        src="Images/Our Approch/Maintenance and Upgrades.svg" alt="">
+                                </div>
+                                <div class="col-md-2 col-lg-2 col-xxl-2 process-text">
+                                    <p>05.</p>
+                                </div>
+                                <div class="col-md-10 col-lg-8 col-xxl-9 text-left main-text">
+                                    <h3>Maintenance and Upgrades</h3>
+                                    <p>We ensure your website stays up-to-date by integrating new features and providing
+                                        timely
+                                        upgrades. Our team maintains your site by promptly resolving any post-launch
+                                        issues
+                                        or
+                                        bugs.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <div class="col-lg-2">
+                    <img decoding="async" loading="lazy" src="Images/Our Approch/Arrow3.svg" alt="arrow">
+                </div> -->
+                    </div>
+                </div>
+
+                <!-- For Mobile and Tablet -->
+
+                <div class="small-device" data-aos="fade-up" data-aos-duration="3000">
+                    <div class="container">
+                        <div class="row">
+                            <div class="column">
+                                <div class="card pink-bg">
+                                    <img src="Images/Our Approch/Requirement Understanding.svg" alt="Clutch">
+                                    <div class="text-center main-text"></div>
+                                    <h3>Requirement Understanding</h3>
+                                    <p>Once you have dropped an inquiry, we take a call with you and understand your
+                                        requirements for your project. We discuss with you your project goals.</p>
+                                </div>
+                            </div>
+                            <div class="column">
+                                <div class="card yellow-bg">
+                                    <img src="Images/Our Approch/Design and Prototyping.svg" alt="Clutch">
+                                    <div class="text-center main-text"></div>
+                                    <h3>Design and Prototyping</h3>
+                                    <p>After discussing the requirements, our UI/UX team designs your product by
+                                        strategically placing aesthetic elements to make it attractive.</p>
+                                </div>
+                            </div>
+                            <div class="column">
+                                <div class="card blue-bg">
+                                    <img src="Images/Our Approch/Development and Quality Assurance.svg" alt="Clutch">
+                                    <div class="text-center main-text"></div>
+                                    <h3>Development and Quality Assurance</h3>
+                                    <p>Our skilled developers create tailored mobile and web solutions with the latest
+                                        features, ensuring high performance and user engagement. Our dedicated testing
+                                        team
+                                        rigorously tests across devices, delivering a responsive, bug-free solution
+                                        ready
+                                        for launch.</p>
+                                </div>
+                            </div>
+                            <div class="column">
+                                <div class="card pink-bg">
+                                    <img src="Images/Our Approch/Deployment.svg" alt="Clutch">
+                                    <div class="text-center main-text"></div>
+                                    <h3>Deployment</h3>
+                                    <p>Once developed, we deploy your app or web solution to the server, releasing it on
+                                        the
+                                        App Store/Play Store or making it live for users. We ensure timely launch and
+                                        promptly notify you of any post-launch issues.</p>
+                                </div>
+                            </div>
+                            <div class="column">
+                                <div class="card yellow-bg">
+                                    <img src="Images/Our Approch/Maintenance and Upgrades.svg" alt="Clutch">
+                                    <div class="text-center main-text"></div>
+                                    <h3>Maintenance and Upgrades</h3>
+                                    <p>We ensure your website stays up-to-date by integrating new features and providing
+                                        timely upgrades. Our team maintains your site by promptly resolving any
+                                        post-launch
+                                        issues or bugs.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="Industry-Section" data-aos="fade-up" data-aos-duration="3000">
+            <div class="container text-center">
+                <span class="badge"><i class="fa-solid fa-star"></i>Serving Clients Globally</span>
+                <h1 class="light-bg-title">Industries We Serve</h1>
+                <div class="industry-main">
+                    <div class="industry-item" data-order="1" data-text="Fintech">
+                        <i class="fa fa-dollar-sign industry-icon"></i>
+                    </div>
+                    <div class="industry-item" data-order="2" data-text="Sports">
+                        <i class="fa fa-running industry-icon"></i>
+                    </div>
+                    <div class="industry-item" data-order="3" data-text="Real Estate">
+                        <i class="fa fa-building industry-icon"></i>
+                    </div>
+                    <div class="industry-item" data-order="4" data-text="Healthcare">
+                        <i class="fa fa-heartbeat industry-icon"></i>
+                    </div>
+                    <div class="industry-item" data-order="5" data-text="Retail">
+                        <i class="fa fa-store industry-icon"></i>
+                    </div>
+                    <div class="industry-item" data-order="6" data-text="Education">
+                        <i class="fa fa-graduation-cap industry-icon"></i>
+                    </div>
+                    <div class="industry-item" data-order="7" data-text="Logistics">
+                        <i class="fa fa-box industry-icon"></i>
+                    </div>
+                    <div class="industry-item" data-order="8" data-text="Travel & Hospitality">
+                        <i class="fa fa-coffee industry-icon"></i>
+                    </div>
+                </div>
+
+                <!-- For Small Device -->
+
+                <div id="carouselExampleCaptions" class="carousel slide small-device" data-aos="zoom-in"
+                    data-aos-duration="1000" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+                        <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+                        <li data-target="#carouselExampleCaptions" data-slide-to="3"></li>
+                        <li data-target="#carouselExampleCaptions" data-slide-to="4"></li>
+                        <li data-target="#carouselExampleCaptions" data-slide-to="5"></li>
+                        <li data-target="#carouselExampleCaptions" data-slide-to="6"></li>
+                        <li data-target="#carouselExampleCaptions" data-slide-to="7"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <!-- Slide 1 -->
+                        <div class="carousel-item active">
+                            <a href="#">
+                                <img src="Images/Industry/New/Fintech.png" class="d-block w-100" alt="Image 1">
+                                <div class="carousel-caption d-block">
+                                    <h3>Fintech</h3>
+                                </div>
+                            </a>
+                        </div>
+                        <!-- Slide 2 -->
+                        <div class="carousel-item">
+                            <a href="#">
+                                <img src="Images/Industry/New/Sports1.png" class="d-block w-100" alt="Image 2">
+                                <div class="carousel-caption d-block">
+                                    <h3>Sports</h3>
+                                </div>
+                            </a>
+                        </div>
+                        <!-- Slide 3 -->
+                        <div class="carousel-item">
+                            <a href="#">
+                                <img src="Images/Industry/New/Real Estate.png" class="d-block w-100" alt="Image 3">
+                                <div class="carousel-caption d-block">
+                                    <h3>Real Estate</h3>
+                                </div>
+                            </a>
+                        </div>
+                        <!-- Slide 4 -->
+                        <div class="carousel-item">
+                            <a href="#">
+                                <img src="Images/Industry/New/Health Care.png" class="d-block w-100" alt="Image 4">
+                                <div class="carousel-caption d-block">
+                                    <h3>Healthcare</h3>
+                                </div>
+                            </a>
+                        </div>
+                        <!-- Slide 5 -->
+                        <div class="carousel-item">
+                            <a href="#">
+                                <img src="Images/Industry/New/Retail.png" class="d-block w-100" alt="Image 5">
+                                <div class="carousel-caption d-block">
+                                    <h3>Retail</h3>
+                                </div>
+                            </a>
+                        </div>
+                        <!-- Slide 6 -->
+                        <div class="carousel-item">
+                            <a href="#">
+                                <img src="Images/Industry/Education.jpg" class="d-block w-100" alt="Image 6">
+                                <div class="carousel-caption d-block">
+                                    <h3>Education</h3>
+                                </div>
+                            </a>
+                        </div>
+                        <!-- Slide 7 -->
+                        <div class="carousel-item">
+                            <a href="#">
+                                <img src="Images/Industry/Logistics.jpg" class="d-block w-100" alt="Image 7">
+                                <div class="carousel-caption d-block">
+                                    <h3>Logistics</h3>
+                                </div>
+                            </a>
+                        </div>
+                        <!-- Slide 8 -->
+                        <div class="carousel-item">
+                            <a href="#">
+                                <img src="Images/Industry/New/Travel & Hospitality.png" class="d-block w-100"
+                                    alt="Image 8">
+                                <div class="carousel-caption d-block">
+                                    <h3>Travel & Hospitality</h3>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="Testimonial-section"  data-aos="fade-up" data-aos-duration="3000">
+            <div class="container text-center">
+                <div class="section-title">
+                    <span class="badge"><i class="fa-solid fa-star"></i>Our Testimonial</span>
+                    <h1 class="light-bg-title">What Client's are Saying</h1>
+                </div>
+                <div class="testimonial_master_wrapper">
+                    <div class="testimonialBg2"></div>
+                    <div class="testimonialBg3"></div>
+                    <div class="slideshow">
+                        <div class="content"> <!-- slide 1 -->
+                            <div class="thumbnail">
+                                <img src="Images/Testimonial/Rank watcher (1) 1 (2).png">
+                            </div>
+                            <div class="btnNtxt">
+                                <div class="testimonialAllContent">
+                                    <div class="testimonial_scroll">
+                                        <h1 class="testimonialCustomSliderHeading">
+                                            Overall I was very happy with the project as a whole as well as the clear
+                                            communication from start to finish. Whenever there were questions or
+                                            possible
+                                            concerns, everyone involved tried to sort things out in a timely and
+                                            professional manner. All in all the team from techforce was the much needed
+                                            help
+                                            I was looking for and I can highly recommend them to anyone who needs to
+                                            push
+                                            their project over the finish line but just needs that little bit of help to
+                                            do
+                                            so. </h1>
+                                    </div>
+                                    <p class="testimonialClientName">Fortitude</p>
+                                    <!-- <p class="testimonialClientDesc">CPF India</p> -->
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="content"> <!-- slide 2 -->
+                            <div class="thumbnail">
+                                <img src="Images/Testimonial/Rank watcher (1) 1 (2).png">
+                            </div>
+                            <div class="btnNtxt">
+                                <div class="testimonialAllContent">
+                                    <div class="testimonial_scroll">
+                                        <h1 class="testimonialCustomSliderHeading">
+
+                                            Working with Techforce on a recent website project for one of our clients
+                                            was an
+                                            absolute pleasure. Their team's efficiency and dedication were evident from
+                                            the
+                                            start, ensuring that the project was completed swiftly without compromising
+                                            on
+                                            quality. Techforce's ability to quickly understand our client's vision and
+                                            requirements resulted in a seamless development process and a final product
+                                            that
+                                            exceeded our expectations. The speed at which they operated was particularly
+                                            impressive, allowing us to meet tight deadlines and deliver for our client
+                                            ahead
+                                            of schedule. The professionalism and skill Techforce brought to this
+                                            collaboration made them an invaluable partner for OH Marketing Group. We
+                                            look
+                                            forward to future projects with their team, confident in their ability to
+                                            deliver outstanding results promptly. </h1>
+                                    </div>
+                                    <p class="testimonialClientName">Onpointe Othopedics</p>
+                                    <!-- <p class="testimonialClientDesc">CPF India</p> -->
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="content"> <!-- slide 3 -->
+                            <div class="thumbnail">
+                                <img src="Images/Testimonial/Rank watcher (1) 1 (2).png">
+                            </div>
+                            <div class="btnNtxt">
+                                <div class="testimonialAllContent">
+                                    <div class="testimonial_scroll">
+                                        <p class="testimonialCustomSliderHeading">
+                                            Overall I was very happy with the project as a whole as well as the clear
+                                            communication from start to finish. Whenever there were questions or
+                                            possible
+                                            concerns, everyone involved tried to sort things out in a timely and
+                                            professional manner. All in all the team from techforce was the much needed
+                                            help
+                                            I was looking for and I can highly recommend them to anyone who needs to
+                                            push
+                                            their project over the finish line but just needs that little bit of help to
+                                            do
+                                            so. </p>
+                                    </div>
+                                    <p class="testimonialClientName">Rank Wathcher</p>
+                                    <!-- <p class="testimonialClientDesc">CPF India</p> -->
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="content"> <!-- slide 4 -->
+                            <div class="thumbnail">
+                                <img src="Images/Testimonial/Rank watcher (1) 1 (2).png">
+                            </div>
+                            <div class="btnNtxt">
+                                <div class="testimonialAllContent">
+                                    <div class="testimonial_scroll">
+                                        <h1 class="testimonialCustomSliderHeading">
+                                            Overall I was very happy with the project as a whole as well as the clear
+                                            communication from start to finish. Whenever there were questions or
+                                            possible
+                                            concerns, everyone involved tried to sort things out in a timely and
+                                            professional manner. All in all the team from techforce was the much needed
+                                            help
+                                            I was looking for and I can highly recommend them to anyone who needs to
+                                            push
+                                            their project over the finish line but just needs that little bit of help to
+                                            do
+                                            so. </h1>
+                                    </div>
+                                    <p class="testimonialClientName">Jazz Kitchen</p>
+                                    <!-- <p class="testimonialClientDesc">CPF India</p> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        jQuery(document).ready(function ($) {
+            var $slickElement = $('.slideshow');
+
+            $slickElement.slick({
+                autoplay: false,
+                dots: false,
+            });
+            $('.selector').slick({
+                nextArrow: '<i class="<i class="fa-solid fa-arrow-right"></i>"></i>',
+                prevArrow: '<i class="<i class="fa-solid fa-arrow-left"></i>"></i>',
+                // add the rest of your options here
+            });
+        });
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const loader = document.getElementById('loader');
+            const webContent = document.getElementById('webContent');
+            const svg = document.getElementById('svg');
+
+            // Loop the SVG animation using setInterval
+            const animationDuration = 1000; // 5 seconds (same as CSS animation duration)
+            let intervalId = setInterval(() => {
+                // Restart the animation by removing and re-adding the CSS animation class
+                svg.style.animation = 'none'; // Stop animation
+                void svg.offsetWidth; // Trigger a reflow, flushing the CSS changes
+                svg.style.animation = ''; // Re-add the animation, causing it to restart
+            }, animationDuration);
+
+            // When everything (images, styles, etc.) is fully loaded, hide the loader
+            window.addEventListener('load', function () {
+                clearInterval(intervalId); // Stop the SVG animation looping
+                loader.classList.add('hidden'); // Hide loader
+                webContent.style.display = 'block'; // Show content
+            });
+        });
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script> -->
+
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script> -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js"></script>
+</body>
+
+</html>
