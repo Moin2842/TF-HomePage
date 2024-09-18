@@ -1,3 +1,5 @@
+// Hero-Section Flip Animation
+
 (function () {
     class Flip {
         constructor(el) {
@@ -33,12 +35,18 @@
 
 })();
 
+// ----------------------------------
+
+// Click Scroll-Button
+
 $(function () {
     $('.scroll').click(function () {
         $('html, body').animate({ scrollTop: $('section.about-area').offset().top }, 'slow');
         return false;
     });
 });
+
+// ----------------------------------
 
 //   Award-Logo Slider
 
@@ -47,20 +55,19 @@ $(function () {
     document.querySelector(".logos").appendChild(copy);
 });
 
+// ----------------------------------
+
 // Counter-Section
 
 document.addEventListener('DOMContentLoaded', () => {
     const counters = document.querySelectorAll('.counter');
     const speed = 800; // The lower the slower
-
-    counters.forEach(counter => {
+    const startCounter = (counter) => {
         const updateCount = () => {
             const target = +counter.getAttribute('data-target');
             const count = +counter.innerText;
-
             // Calculate the increment
             const increment = target / speed;
-
             // Check if the counter is at the target
             if (count < target) {
                 // Add increment to current value
@@ -71,10 +78,22 @@ document.addEventListener('DOMContentLoaded', () => {
                 counter.innerText = target;
             }
         };
-
         updateCount();
+    };
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                startCounter(entry.target); // Start the counter when visible
+                observer.unobserve(entry.target); // Stop observing once it's started
+            }
+        });
+    }, { threshold: 0.5 }); // 50% of the element should be visible to trigger the counter
+    counters.forEach(counter => {
+        observer.observe(counter); // Observe each counter element
     });
 });
+
+// ----------------------------------
 
 // Service Card Tilt
 
@@ -84,3 +103,5 @@ VanillaTilt.init(document.querySelectorAll(".card"), {
     glare: true,
     "max-glare": 0.5,
 });
+
+// ----------------------------------
