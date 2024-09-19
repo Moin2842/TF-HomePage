@@ -895,6 +895,8 @@
         </section>
     </div>
 
+    <!-- Testimonial Slider -->
+
     <script>
         jQuery(document).ready(function ($) {
             var $slickElement = $('.slideshow');
@@ -911,29 +913,30 @@
         });
     </script>
 
+    <!----------------------->
+
+    <!-- Loader-Script -->
+
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             const loader = document.getElementById('loader');
             const webContent = document.getElementById('webContent');
-            const svg = document.getElementById('svg');
 
-            // Loop the SVG animation using setInterval
-            const animationDuration = 1000; // 5 seconds (same as CSS animation duration)
-            let intervalId = setInterval(() => {
-                // Restart the animation by removing and re-adding the CSS animation class
-                svg.style.animation = 'none'; // Stop animation
-                void svg.offsetWidth; // Trigger a reflow, flushing the CSS changes
-                svg.style.animation = ''; // Re-add the animation, causing it to restart
-            }, animationDuration);
-
-            // When everything (images, styles, etc.) is fully loaded, hide the loader
+            // When everything is fully loaded, hide the loader and show the content
             window.addEventListener('load', function () {
-                clearInterval(intervalId); // Stop the SVG animation looping
-                loader.classList.add('hidden'); // Hide loader
-                webContent.style.display = 'block'; // Show content
+                // Add slide-up effect to the loader with bottom border-radius
+                loader.classList.add('slide-up');
+
+                setTimeout(function () {
+                    loader.style.display = 'none'; // Hide loader completely
+                    webContent.style.visibility = "visible"; // Show content
+                    webContent.style.opacity = 1; // Fade in content
+                }, 700); // Wait for slide-up effect to complete
             });
         });
     </script>
+
+    <!----------------------->
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
     <!-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
