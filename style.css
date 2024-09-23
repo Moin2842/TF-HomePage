@@ -29,6 +29,11 @@ ul {
     margin-bottom: 0;
 }
 
+::selection {
+    color: white;
+    background: var(--Text);
+  }
+
 ::-webkit-scrollbar {
     width: 12px;
 }
@@ -58,7 +63,7 @@ ul {
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: transform .8s ease-out, border-radius .8s ease-out;
+    transition: transform .75s ease-out, border-radius .75s ease-out;
 }
 
 .loader-content {
@@ -123,7 +128,7 @@ ul {
     background-color: var(--Text);
     color: #fff;
     border: 2px solid transparent;
-    margin-top: 50px;
+    margin-top: 40px;
 }
 
 .Main-Button span {
@@ -795,8 +800,7 @@ section.award-section ul {
 /* Counter-Section */
 
 .counter-section {
-    background-color: #0d0d2b;
-    /* Ensuring the background is dark */
+    background-color: var(--Text);
     color: white;
     padding: 60px 0px;
     margin-bottom: 60px;
@@ -829,7 +833,7 @@ section.award-section ul {
 
 .services-section {
     text-align: center;
-    padding: 100px 0px;
+    padding: 100px 0px 130px 0px;;
     background-image: url(Images/Highligted\ Services.webp);
     background-size: cover;
     background-repeat: no-repeat;
@@ -867,6 +871,7 @@ section.award-section ul {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     border: 1px solid transparent;
     overflow: hidden;
+    height: 100%;
 }
 
 .services-slider .card:hover {
@@ -897,6 +902,8 @@ section.award-section ul {
 .services-slider .card-content img {
     width: 88px;
     margin-bottom: 20px;
+    margin: 0px auto;
+    margin-bottom: 25px;
 }
 
 .services-slider .card h3 {
@@ -1018,6 +1025,68 @@ section.award-section ul {
     height: 220px;
     opacity: 1;
 }
+
+.services-slider button.slick-prev.slick-arrow {
+    position: absolute;
+    /* z-index: 9999; */
+    bottom: -80px;
+    left: 45%;
+    /* background: var(--Text); */
+    background: none;
+    border: 2px solid #fff;
+    color: transparent;
+    /* border: none; */
+    outline: none;
+    cursor: pointer;
+    height: 45px;
+    width: 45px;
+    border-radius: 50px;
+    padding: 0;
+    background-image: url(Images/Testimonial/Arrow-left-White.svg);
+    background-size: 100% 100%;
+    transition: all .4s ease-in-out;
+    opacity: 1;
+    z-index: 99;
+}
+
+.services-slider button.slick-next.slick-arrow {
+    position: absolute;
+    bottom: -80px;
+    right: 45%;
+    background: none;
+    border: 2px solid white;
+    color: transparent;
+    /* border: none; */
+    padding: 0;
+    cursor: pointer;
+    outline: none;
+    height: 45px;
+    width: 45px;
+    border-radius: 50px;
+    background-image: url(Images/Testimonial/Arrow-right-white.svg);
+    background-size: 100% 100%;
+    transition: all .4s ease-in-out;
+    opacity: 1;
+}
+
+.services-slider button.slick-prev.slick-arrow:hover {
+    background-color: #fff;
+    background-image: url(Images/Testimonial/Arrow-left.svg);
+}
+
+.services-slider button.slick-next.slick-arrow:hover {
+    background-color: #fff;
+    background-image: url(Images/Testimonial/Arrow-right.svg) !important;
+}
+
+.services-slider .slick-slide {
+    margin: 0 30px;
+    height: 100%;
+  }
+
+  .services-slider .slick-track{
+    padding: 15px 0px;
+  }
 
 /* Industry-Section */
 
@@ -1218,8 +1287,13 @@ section.award-section ul {
     padding: 15px;
     border-radius: 10px;
     border: none;
-    transition: all .3s ease-in-out;
+    transition: all .4s ease-in-out;
+    border: 1px solid transparent;
     overflow: hidden;
+}
+
+.portfolio-section .card:hover{
+    border: 1px solid var(--Text);
 }
 
 .portfolio-section .card .card-body {
@@ -1367,7 +1441,7 @@ button.slick-prev.slick-arrow {
     background-image: url(Images/Testimonial/Arrow-left.svg);
     background-size: 100% 100%;
     transition: all .4s ease-in-out;
-    opacity: .85;
+    opacity: 1;
 }
 
 button.slick-next.slick-arrow {
@@ -1387,7 +1461,7 @@ button.slick-next.slick-arrow {
     background-image: url(Images/Testimonial/Arrow-right.svg);
     background-size: 100% 100%;
     transition: all .4s ease-in-out;
-    opacity: .85;
+    opacity: 1;
 }
 
 button.slick-prev.slick-arrow:hover {
@@ -1475,7 +1549,6 @@ button.slick-next.slick-arrow:hover {
 .testimonial_scroll::-webkit-scrollbar-thumb:hover {
     background-color: #a0a0a5;
 }
-
 
 /* Responsive CSS */
 
@@ -1718,11 +1791,11 @@ button.slick-next.slick-arrow:hover {
     /* Testimonial-Section */
 
     button.slick-prev.slick-arrow {
-        left: 40%;
+        left: 40% !important;
     }
 
     button.slick-next.slick-arrow {
-        right: 40%;
+        right: 40% !important;
     }
 }
 
@@ -1814,6 +1887,18 @@ button.slick-next.slick-arrow:hover {
     .services-slider .card {
         margin-bottom: 20px;
     }
+
+    .services-slider .slick-track{
+        padding: 0;
+    }
+
+    .services-slider button.slick-prev.slick-arrow{
+        bottom: -30px;
+    }
+    
+    .services-slider button.slick-next.slick-arrow{
+        bottom: -30px;
+    }
 }
 
 @media (max-width: 576px) {
@@ -1825,6 +1910,11 @@ button.slick-next.slick-arrow:hover {
     .container-xl,
     .container-xxl {
         max-width: 540px;
+    }
+
+    .slide-up {
+        transform: translateY(-100%);
+        border-radius: 0 0 35% 35%;
     }
 
     .light-bg-title {
@@ -1930,11 +2020,11 @@ button.slick-next.slick-arrow:hover {
     /* Testimonial-Section */
 
     button.slick-prev.slick-arrow {
-        left: 32%;
+        left: 32% !important;
     }
 
     button.slick-next.slick-arrow {
-        right: 32%;
+        right: 32% !important;
     }
 
     .testimonial_scroll {
