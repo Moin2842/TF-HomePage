@@ -15,6 +15,8 @@
     <link rel="stylesheet" href="style.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css" /> -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" /> -->
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="script.js"></script>
 </head>
@@ -63,6 +65,8 @@
             <div class="logo-name">TECHFORCE GLOBAL</div>
         </div>
     </div>
+
+    <!-- Main-Content -->
 
     <div class="web-content" id="webContent">
 
@@ -344,6 +348,50 @@
                             <img src="Images/Services/Blockchain Development.svg" alt="Blockchain Development">
                             <h3>Blockchain Development</h3>
                             <p>Secure and scalable blockchain development</p>
+                            <button class="animated-button">
+                                <svg viewBox="0 0 24 24" class="arr-2" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z">
+                                    </path>
+                                </svg>
+                                <span class="text">Explore Further</span>
+                                <span class="circle"></span>
+                                <svg viewBox="0 0 24 24" class="arr-1" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z">
+                                    </path>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="card" data-tilt>
+                        <div class="card-content">
+                            <img src="Images/Services/Software Development.svg" alt="Software Development">
+                            <h3>Software Development</h3>
+                            <p>Custom software solutions and innovation</p>
+
+                            <button class="animated-button">
+                                <svg viewBox="0 0 24 24" class="arr-2" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z">
+                                    </path>
+                                </svg>
+                                <span class="text">Explore Further</span>
+                                <span class="circle"></span>
+                                <svg viewBox="0 0 24 24" class="arr-1" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z">
+                                    </path>
+                                </svg>
+                            </button>
+
+                        </div>
+                    </div>
+                    <div class="card" data-tilt>
+                        <div class="card-content">
+                            <img src="Images/Services/Fintech Solutions.svg" alt="Fintech Solutions">
+                            <h3>Fintech Solutions</h3>
+                            <p>Financial technology solutions for growth</p>
                             <button class="animated-button">
                                 <svg viewBox="0 0 24 24" class="arr-2" xmlns="http://www.w3.org/2000/svg">
                                     <path
@@ -895,20 +943,95 @@
         </section>
     </div>
 
-    <!-- Testimonial Slider -->
+    <!----------------------->
+
+    <!-- Testimonial-Slider-Script -->
 
     <script>
         jQuery(document).ready(function ($) {
             var $slickElement = $('.slideshow');
 
             $slickElement.slick({
-                autoplay: false,
+                autoplay: true,
                 dots: false,
             });
             $('.selector').slick({
                 nextArrow: '<i class="<i class="fa-solid fa-arrow-right"></i>"></i>',
                 prevArrow: '<i class="<i class="fa-solid fa-arrow-left"></i>"></i>',
                 // add the rest of your options here
+            });
+        });
+    </script>
+
+    <!----------------------->
+
+    <!-- Service Slider -->
+
+    <script>
+        $('.services-slider').slick({
+            dots: false,
+            infinite: true,
+            speed: 300,
+            autoplay: true,
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            responsive: [
+                {
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 3,
+                        infinite: true,
+                        dots: false
+                    }
+                },
+                {
+                    breakpoint: 992,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 2
+                    }
+                },
+                {
+                    breakpoint: 768,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                },
+                // You can unslick at a given breakpoint now by adding:
+                // settings: "unslick"
+                // instead of a settings object
+            ]
+        });
+
+        $(document).ready(function () {
+            // Initialize the Slick slider
+            $('.services-slider').on('setPosition', function () {
+                var maxHeight = 0;
+
+                // Reset the height of all cards
+                $('.services-slider .card').each(function () {
+                    $(this).css('height', 'auto');
+                });
+
+                // Find the tallest card
+                $('.services-slider .card').each(function () {
+                    var thisHeight = $(this).outerHeight();
+                    if (thisHeight > maxHeight) {
+                        maxHeight = thisHeight;
+                    }
+                });
+
+                // Set all cards to the height of the tallest one
+                $('.services-slider .card').each(function () {
+                    $(this).css('height', maxHeight + 'px');
+                });
+            });
+
+            // Initialize the Slick slider
+            $('.services-slider').slick({
+                // Slick slider options
             });
         });
     </script>
@@ -949,6 +1072,7 @@
     </script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script> -->
 </body>
 
 </html>
