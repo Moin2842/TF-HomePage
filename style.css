@@ -32,7 +32,7 @@ ul {
 ::selection {
     color: white;
     background: var(--Text);
-  }
+}
 
 ::-webkit-scrollbar {
     width: 12px;
@@ -112,6 +112,7 @@ ul {
     transition: opacity .2s ease, visibility .2s;
 }
 
+
 /* Button-CSS */
 
 .Main-Button {
@@ -152,7 +153,7 @@ ul {
 }
 
 .Main-Button:hover span .svg-bg {
-    animation: rotate 5s linear infinite;
+    animation: rotate 4s linear infinite;
 }
 
 @keyframes rotate {
@@ -639,8 +640,8 @@ section.award-section ul {
 /* About Section */
 
 .about-area {
-    /* background: #F3F7FD; */
-    background-image: url(Images/Light\ Gradient\ Bg.jpg);
+    background: #f8fbff;
+    /* background-image: url(Images/Light\ Gradient\ Bg.jpg); */
     padding: 100px 0px;
     background-position: center;
     background-size: cover;
@@ -833,7 +834,7 @@ section.award-section ul {
 
 .services-section {
     text-align: center;
-    padding: 100px 0px 130px 0px;;
+    padding: 100px 0px 130px 0px;
     background-image: url(Images/Highligted\ Services.webp);
     background-size: cover;
     background-repeat: no-repeat;
@@ -1082,11 +1083,11 @@ section.award-section ul {
 .services-slider .slick-slide {
     margin: 0 30px;
     height: 100%;
-  }
+}
 
-  .services-slider .slick-track{
+.services-slider .slick-track {
     padding: 15px 0px;
-  }
+}
 
 /* Industry-Section */
 
@@ -1269,7 +1270,8 @@ section.award-section ul {
 .portfolio-section {
     /* margin: 60px 0px; */
     background-image: url(Images/Light\ Gradient\ Bg.jpg);
-    padding: 100px 0px;
+    padding: 100px 0px 80px 0px;
+    background-size: cover;
 }
 
 .portfolio-main {
@@ -1278,30 +1280,40 @@ section.award-section ul {
 
 .portfolio-section .card-title {
     font-weight: bold;
-    color: var(--Primary);
-    font-size: 24px;
+    color: #f3f3f3;
+    font-size: 28px;
 }
 
 .portfolio-section .card {
     height: 100%;
-    padding: 15px;
+    /* padding: 15px; */
     border-radius: 10px;
     border: none;
     transition: all .4s ease-in-out;
-    border: 1px solid transparent;
+    /* border: 1px solid transparent; */
     overflow: hidden;
 }
 
-.portfolio-section .card:hover{
-    border: 1px solid var(--Text);
+.portfolio-section .card:hover {
+    /* border: 1px solid var(--Text);   */
 }
 
 .portfolio-section .card .card-body {
     text-align: left;
-    display: flex;
+    /* display: flex; */
     justify-content: space-between;
     align-items: center;
     padding: 20px 0px;
+    gap: 20px;
+    position: absolute;
+    bottom: 2%;
+    left: 5%;
+}
+
+.portfolio-section .card-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     gap: 20px;
 }
 
@@ -1310,7 +1322,7 @@ section.award-section ul {
 }
 
 .portfolio-section .card-description {
-    color: var(--Text);
+    color: #f3f3f3;
     font-size: 18px;
 }
 
@@ -1347,15 +1359,16 @@ section.award-section ul {
 }
 
 .portfolio-section .card-image {
-    height: 300px;
+    height: 330px;
     object-fit: cover;
     border-radius: 8px;
-    transition: transform .5s ease;
+    transition: all .4s ease-in-out;
     overflow: hidden;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
 }
+
 
 /* Testimonial-Section  */
 
@@ -1471,7 +1484,7 @@ button.slick-prev.slick-arrow:hover {
 
 button.slick-next.slick-arrow:hover {
     background-color: #0c0f23;
-    background-image: url(Images/Testimonial/Arrow-right-White.svg) !important;
+    background-image: url(Images/Testimonial/Arrow-right-white.svg) !important;
 }
 
 .pagingInfo {
@@ -1770,7 +1783,7 @@ button.slick-next.slick-arrow:hover {
 
     /* Portfoli-Section */
 
-    .portfolio-section .col-md-4 {
+    .portfolio-section .col-md-4 , .portfolio-section .col-md-8 {
         flex: 0 0 100%;
         max-width: 100%;
         margin-bottom: 30px;
@@ -1888,15 +1901,15 @@ button.slick-next.slick-arrow:hover {
         margin-bottom: 20px;
     }
 
-    .services-slider .slick-track{
+    .services-slider .slick-track {
         padding: 0;
     }
 
-    .services-slider button.slick-prev.slick-arrow{
+    .services-slider button.slick-prev.slick-arrow {
         bottom: -30px;
     }
-    
-    .services-slider button.slick-next.slick-arrow{
+
+    .services-slider button.slick-next.slick-arrow {
         bottom: -30px;
     }
 }
@@ -2057,4 +2070,94 @@ button.slick-next.slick-arrow:hover {
     .logo-name {
         font-size: 20px;
     }
+}
+
+
+
+
+/* Cursor Hover */
+
+.cursor {
+    position: absolute;
+    background: #000000;
+    width: 8px;
+    height: 8px;
+    border-radius: 100%;
+    z-index: 999;
+    transition: 0.5s cubic-bezier(0.75, -1.27, 0.3, 2.33) transform,
+        0.2s cubic-bezier(0.75, -1.27, 0.3, 2.33) opacity;
+    user-select: none;
+    pointer-events: none;
+    transform: scale(0.8);
+}
+
+.cursor::before {
+    content: "";
+    width: 50%;
+    height: 50%;
+    position: absolute;
+    left: 50%;
+    top: 20%;
+    transform: translateX(-50%);
+    display: block;
+    background-image: url("Images/View.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    border-radius: 100%;
+    opacity: 0;
+}
+
+.cursor.active {
+    opacity: 1;
+    background-color: #000000;
+    color: #000000;
+    transform: scale(12);
+}
+
+.cursor.active::before {
+    opacity: 1;
+}
+
+.cursor-follower {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.525);
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    z-index: 1;
+    transition: 0.6s cubic-bezier(0.75, -1.27, 0.3, 2.33) transform,
+        0.4s cubic-bezier(0.75, -1.27, 0.3, 2.33) opacity;
+    user-select: none;
+    pointer-events: none;
+    transform: translate(4px, 4px);
+}
+
+.cursor-follower.active {
+    opacity: 0.3;
+    transform: scale(0);
+}
+/* 
+.portfolio-inner{
+    &:before {
+        content: '';
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(0deg, rgba(17,17,17,0.5) 0%, rgba(17,17,17,0) 100%);
+    z-index: 0;
+    transition: .35s all cubic-bezier(.455, .03, .515, .955);
+    opacity: 1;
+}   } */
+
+.portfolio-inner a{
+    text-decoration: none;
+}
+
+.portfolio-inner:hover img{
+    filter: blur(5px) !important;
+    transform: scale(1.1);
 }
