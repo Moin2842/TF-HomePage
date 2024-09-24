@@ -15,8 +15,9 @@
     <link rel="stylesheet" href="style.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css" /> -->
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" /> -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
+
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="script.js"></script>
 </head>
@@ -65,6 +66,9 @@
             <div class="logo-name">TECHFORCE GLOBAL</div>
         </div>
     </div>
+
+    <div class="cursor"></div>
+    <!-- <div class="cursor-follower"></div> -->
 
     <!-- Main-Content -->
 
@@ -154,8 +158,8 @@
             </div>
         </section>
 
-        <section class="award-section" data-aos="fade-up" data-aos-duration="3000">
-            <!-- <div class="logos">
+        <!-- <section class="award-section" data-aos="fade-up" data-aos-duration="3000">
+            <div class="logos">
             <div class="logos-slide">
                 <img src="Images/Award/Clutch.png" />
                 <img src="Images/Award/Software Suggest.png" />
@@ -168,7 +172,7 @@
                 <img src="Images/Award/Good Firm.png" />
                 <img src="Images/Award/Expertise.com.png" />
             </div>
-        </div> -->
+        </div>
             <div class="container">
                 <ul>
                     <li class="award-item m-3">
@@ -193,7 +197,7 @@
                     </li>
                 </ul>
             </div>
-        </section>
+        </section> -->
 
         <section class="about-area" data-aos="fade-up" data-aos-duration="3000">
             <div class="container">
@@ -303,7 +307,7 @@
                         <div class="card-content">
                             <img src="Images/Services/Software Development.svg" alt="Software Development">
                             <h3>Software Development</h3>
-                            <p>Custom software solutions and innovation</p>
+                            <p>Techforce develops Custom software for all the Businesses</p>
 
                             <button class="animated-button">
                                 <svg viewBox="0 0 24 24" class="arr-2" xmlns="http://www.w3.org/2000/svg">
@@ -326,7 +330,7 @@
                         <div class="card-content">
                             <img src="Images/Services/Fintech Solutions.svg" alt="Fintech Solutions">
                             <h3>Fintech Solutions</h3>
-                            <p>Financial technology solutions for growth</p>
+                            <p>The One Place for all of your Fintech and Banking Needs</p>
                             <button class="animated-button">
                                 <svg viewBox="0 0 24 24" class="arr-2" xmlns="http://www.w3.org/2000/svg">
                                     <path
@@ -347,7 +351,7 @@
                         <div class="card-content">
                             <img src="Images/Services/Blockchain Development.svg" alt="Blockchain Development">
                             <h3>Blockchain Development</h3>
-                            <p>Secure and scalable blockchain development</p>
+                            <p>Techforce helps companies implement blockchain technology in day-to-day operations.</p>
                             <button class="animated-button">
                                 <svg viewBox="0 0 24 24" class="arr-2" xmlns="http://www.w3.org/2000/svg">
                                     <path
@@ -367,8 +371,9 @@
                     <div class="card" data-tilt>
                         <div class="card-content">
                             <img src="Images/Services/Software Development.svg" alt="Software Development">
-                            <h3>Software Development</h3>
-                            <p>Custom software solutions and innovation</p>
+                            <h3>Testing Services</h3>
+                            <p>We focus on areas of QA and test management and we assure the quality of a
+                                product/service</p>
 
                             <button class="animated-button">
                                 <svg viewBox="0 0 24 24" class="arr-2" xmlns="http://www.w3.org/2000/svg">
@@ -390,8 +395,8 @@
                     <div class="card" data-tilt>
                         <div class="card-content">
                             <img src="Images/Services/Fintech Solutions.svg" alt="Fintech Solutions">
-                            <h3>Fintech Solutions</h3>
-                            <p>Financial technology solutions for growth</p>
+                            <h3>Web Development</h3>
+                            <p>Techforce provides managed services that covers all the end to end development</p>
                             <button class="animated-button">
                                 <svg viewBox="0 0 24 24" class="arr-2" xmlns="http://www.w3.org/2000/svg">
                                     <path
@@ -419,54 +424,80 @@
 
                 <div class="row portfolio-main">
                     <!-- First Card -->
-                    <div class="col-md-4">
-                        <div class="card position-relative">
-                            <img src="Images/Portfolio/Medicare-App.webp" class="card-img-top card-image" alt="#">
-                            <div class="card-body">
-                                <div class="card-content">
+                    <div class="col-md-8">
+                        <a href="">
+                            <div class="card position-relative portfolio-inner">
+                                <img src="Images/Portfolio/1.png" class="card-img-top card-image" alt="#">
+                                <div class="card-body">
                                     <h5 class="card-title">i-Care</h5>
-                                    <p class="card-description">Medicare app simplifies medical access.</p>
+                                    <div class="card-content">
+                                        <p class="card-description">Medicare app simplifies medical access.</p>
+                                        <!-- <a href="#" class="arrow-icon">
+                                            <i class="fas fa-arrow-right"></i>
+                                        </a> -->
+                                    </div>
                                 </div>
-                                <a href="#" class="arrow-icon">
-                                    <i class="fas fa-arrow-right"></i>
-                                </a>
                             </div>
-                        </div>
+                        </a>
                     </div>
 
                     <!-- Second Card -->
                     <div class="col-md-4">
-                        <div class="card position-relative">
-                            <img src="Images/Portfolio/Fortitude.webp" class="card-img-top card-image" alt="#">
-                            <div class="card-body">
-                                <div class="card-content">
+                        <a href="https://dev.techforce.global/portfolio/nft-minting-platform-development/">
+                            <div class="card position-relative portfolio-inner">
+                                <img src="Images/Portfolio/4.png" class="card-img-top card-image" alt="#">
+                                <div class="card-body">
                                     <h5 class="card-title">Fortitude</h5>
-                                    <p class="card-description">A community-focused NFT project.</p>
+                                    <div class="card-content">
+                                        <p class="card-description">A community-focused NFT project.</p>
+                                        <!-- <a href="#" class="arrow-icon">
+                                            <i class="fas fa-arrow-right"></i>
+                                        </a> -->
+                                    </div>
                                 </div>
-                                <a href="#" class="arrow-icon">
-                                    <i class="fas fa-arrow-right"></i>
-                                </a>
                             </div>
-                        </div>
-                    </div>
-
-                    <!-- Third Card -->
-                    <div class="col-md-4">
-                        <div class="card position-relative">
-                            <img src="Images/Portfolio/Medicare-App.webp" class="card-img-top card-image" alt="#">
-                            <div class="card-body">
-                                <div class="card-content">
-                                    <h5 class="card-title">i-Care</h5>
-                                    <p class="card-description">Medicare app simplifies medical access.</p>
-                                </div>
-                                <a href="#" class="arrow-icon">
-                                    <i class="fas fa-arrow-right"></i>
-                                </a>
-                            </div>
-                        </div>
+                        </a>
                     </div>
 
                 </div>
+                <div class="row portfolio-main">
+                    <!-- First Card -->
+                    <div class="col-md-4">
+                        <a href="">
+                            <div class="card position-relative portfolio-inner">
+                                <img src="Images/Portfolio/2.png" class="card-img-top card-image" alt="#">
+                                <div class="card-body">
+                                    <h5 class="card-title">i-Care</h5>
+                                    <div class="card-content">
+                                        <p class="card-description">Medicare app simplifies medical access.</p>
+                                        <!-- <a href="#" class="arrow-icon">
+                                            <i class="fas fa-arrow-right"></i>
+                                        </a> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Second Card -->
+                    <div class="col-md-8">
+                        <a href="https://dev.techforce.global/portfolio/nft-minting-platform-development/">
+                            <div class="card position-relative portfolio-inner">
+                                <img src="Images/Portfolio/3.png" class="card-img-top card-image" alt="#">
+                                <div class="card-body">
+                                    <h5 class="card-title">Fortitude</h5>
+                                    <div class="card-content">
+                                        <p class="card-description">A community-focused NFT project.</p>
+                                        <!-- <a href="#" class="arrow-icon">
+                                            <i class="fas fa-arrow-right"></i>
+                                        </a> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                
                 <a class="Main-Button" href="#">
                     View More
                     <span class="p-relative">
@@ -943,6 +974,55 @@
         </section>
     </div>
 
+    <!-- Cursor Hover JS -->
+
+    <script>
+        var cursor = $(".cursor"),
+            follower = $(".cursor-follower");
+
+        var posX = 0,
+            posY = 0,
+            mouseX = 0,
+            mouseY = 0;
+
+        TweenMax.to({}, 0.016, {
+            repeat: -1,
+            onRepeat: function () {
+                posX += (mouseX - posX) / 9;
+                posY += (mouseY - posY) / 9;
+
+                TweenMax.set(follower, {
+                    css: {
+                        left: posX - 20,
+                        top: posY - 20
+                    }
+                });
+
+                TweenMax.set(cursor, {
+                    css: {
+                        left: mouseX,
+                        top: mouseY
+                    }
+                });
+            }
+        });
+
+        $(document).on("mousemove", function (e) {
+            mouseX = e.pageX;
+            mouseY = e.pageY;
+        });
+
+        $(".portfolio-inner").on("mouseenter", function () {
+            cursor.addClass("active");
+            follower.addClass("active");
+        });
+
+        $(".portfolio-inner").on("mouseleave", function () {
+            cursor.removeClass("active");
+            follower.removeClass("active");
+        });
+    </script>
+
     <!----------------------->
 
     <!-- Testimonial-Slider-Script -->
@@ -1072,7 +1152,9 @@
     </script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js"></script>
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script> -->
+    <!-- <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js'></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script> -->
 </body>
 
 </html>
