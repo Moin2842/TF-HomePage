@@ -11,7 +11,7 @@
     box-sizing: border-box;
 }
 
-.tawk-icon-right{
+.tawk-bubble-container .tawk-icon-right{
     display: none !important;
 }
 
