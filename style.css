@@ -12,7 +12,7 @@
 }
 
 .tawk-icon-right{
-    display: none;
+    display: none !important;
 }
 
 html {
