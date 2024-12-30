@@ -11,6 +11,10 @@
     box-sizing: border-box;
 }
 
+.tawk-icon-right{
+    display: none;
+}
+
 html {
     scroll-behavior: smooth;
 }
